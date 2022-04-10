@@ -6,3 +6,65 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Red Hat Display', sans-serif;
 }
+body{
+    background-image: linear-gradient(to bottom, hsl(224, 100%, 92%) 50%, hsl(225, 100%, 94%) 50%, hsl(225, 100%, 94%) 100%) ;
+}
+.container{
+    width: 20em;
+    aspect-ratio: 2;
+    background-color: #fff;
+    margin: 1em auto;
+    border-radius: 25px;
+    overflow-x: clip;
+    text-align: center;
+    padding-bottom: 1em;
+}
+h1{
+    font-size: 1.6em;
+    font-weight: 900;
+}
+img{
+    width: inherit;
+}
+.plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .7em;
+    position: relative;
+    padding-left: 10px;
+}
+.plan::before{
+    position: absolute;
+    content: url(./images/icon-music.svg);
+    top: 50%;
+    margin-top: -23px;
+    left: 35px;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+.price .plan-title{
+    font-weight: 900;
+}
+.price .change{
+    font-weight: 500;
+}
+.title p{
+    font-size: 16px;
+    padding: 0 2em;
+}
+ul{
+    list-style-type: none;
+}
+ul li button{
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color:  hsl(245, 75%, 52%);
+    line-height: 15px;
+}
