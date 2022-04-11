@@ -42,6 +42,7 @@ body::after{
     text-align: center;
     padding-bottom: 1em;
     color: hsl(224, 23%, 55%);
+    box-shadow: 0px 30px 20px -20px rgb(0 0 0 / 20%);
 }
 h1{
     font-size: 1.6em;
@@ -75,18 +76,21 @@ img{
 .price .plan-title{
     font-weight: 900;
 }
-.price .change{
+.price .option a{
     font-weight: 500;
 }
+a:hover{text-decoration: none;}
 .title p{
     font-size: 16px;
     padding: 0 2em;
 }
 ul{
+    padding: 0;
     list-style-type: none;
 }
 ul li{
-    margin: 0 15% 10px;
+    width: 80%;
+    margin: 0 10% 10px;
 }
 ul li button{
     width: 100%;
@@ -99,12 +103,20 @@ ul.buttons .confirm{
     background-color: hsl(245, 75%, 52%);
     line-height: 25px;
 }
+.confirm:hover{opacity: .5;}
 ul.buttons .cancel{
     color: hsl(224, 23%, 55%);
 }
+ul.buttons .cancel:hover{color: hsl(223, 47%, 23%);}
 .plan-title, h1{
     color: hsl(223, 47%, 23%);
 }
-.change, .confirm, .cancel{
+.option, .confirm, .cancel{
     cursor: pointer;
+}
+
+@media (max-width:375px) {
+    body::before, body::after{
+        display: none;
+    }
 }
