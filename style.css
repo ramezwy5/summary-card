@@ -7,7 +7,30 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 body{
+    position: relative;
     background-image: linear-gradient(to bottom, hsl(224, 100%, 92%) 50%, hsl(225, 100%, 94%) 50%, hsl(225, 100%, 94%) 100%) ;
+}
+body::before{
+    position: absolute;
+    content: "";
+    top: -29em;
+    left: -10em;
+    width: 48em;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+    background-color: hsl(224, 100%, 92%);
+    z-index: -10;
+}
+body::after{
+    position: absolute;
+    content: "";
+    top: 7em;
+    left: 27em;
+    width: 48em;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+    background-color: hsl(225, 100%, 94%);
+    z-index: -10;
 }
 .container{
     width: 20em;
@@ -18,6 +41,7 @@ body{
     overflow-x: clip;
     text-align: center;
     padding-bottom: 1em;
+    color: hsl(224, 23%, 55%);
 }
 h1{
     font-size: 1.6em;
@@ -61,10 +85,26 @@ img{
 ul{
     list-style-type: none;
 }
+ul li{
+    margin: 0 15% 10px;
+}
 ul li button{
-    padding-bottom: 10px;
+    width: 100%;
+    padding: 10px;
     border: none;
     border-radius: 15px;
-    background-color:  hsl(245, 75%, 52%);
-    line-height: 15px;
+}
+ul.buttons .confirm{
+    color:#fff;
+    background-color: hsl(245, 75%, 52%);
+    line-height: 25px;
+}
+ul.buttons .cancel{
+    color: hsl(224, 23%, 55%);
+}
+.plan-title, h1{
+    color: hsl(223, 47%, 23%);
+}
+.change, .confirm, .cancel{
+    cursor: pointer;
 }
