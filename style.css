@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Jomhuria&family=Open+Sans:ital,wght@0,300;1,300&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
 *{
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
@@ -7,36 +8,19 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 body{
-    position: relative;
-    background-image: linear-gradient(to bottom, hsl(224, 100%, 92%) 50%, hsl(225, 100%, 94%) 50%, hsl(225, 100%, 94%) 100%) ;
-}
-body::before{
-    position: absolute;
-    content: "";
-    top: -29em;
-    left: -10em;
-    width: 48em;
-    aspect-ratio: 1;
-    border-radius: 1000px;
-    background-color: hsl(224, 100%, 92%);
-    z-index: -10;
-}
-body::after{
-    position: absolute;
-    content: "";
-    top: 7em;
-    left: 27em;
-    width: 48em;
-    aspect-ratio: 1;
-    border-radius: 1000px;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     background-color: hsl(225, 100%, 94%);
-    z-index: -10;
 }
 .container{
-    width: 20em;
+    width: 25%;
     aspect-ratio: 2;
     background-color: #fff;
-    margin: 1em auto;
+    margin: 12% auto;
     border-radius: 25px;
     overflow-x: clip;
     text-align: center;
@@ -49,23 +33,27 @@ h1{
     font-weight: 900;
 }
 img{
-    width: inherit;
+    width: 100%;
 }
 .plan{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     font-size: .7em;
     position: relative;
-    padding-left: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: hsl(0deg 0% 94%);
+    width: 95%;
+    border-radius: 10px;
 }
 .plan::before{
     position: absolute;
     content: url(./images/icon-music.svg);
     top: 50%;
-    margin-top: -23px;
-    left: 35px;
+    margin-top: -6%;
+    left: 5%;
 }
 
 .price{
@@ -115,8 +103,25 @@ ul.buttons .cancel:hover{color: hsl(223, 47%, 23%);}
     cursor: pointer;
 }
 
-@media (max-width:375px) {
-    body::before, body::after{
-        display: none;
+@media (max-width:375px){
+    body{
+        background-image: none;
+    }
+    .container{
+        width: 95%;
+    }
+    .plan::before{
+        margin-top: -9%;
+        left: 3%;
+    }
+}
+@media (min-width:376px) and (max-width: 576px){
+    .container{
+        width: 80%;
+    }
+}
+@media (min-width: 577px) and (max-width: 991px){
+    .container{
+        width: 70%;
     }
 }
