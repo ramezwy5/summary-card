@@ -52,8 +52,13 @@ img{
     position: absolute;
     content: url(./images/icon-music.svg);
     top: 50%;
+<<<<<<< HEAD
     margin-top: -25px;
     left: 5px;
+=======
+    margin-top: -6%;
+    left: 3%;
+>>>>>>> 43e0ef9f42fc5d7b8e72d54dec205a41da848b4a
 }
 
 .price{
