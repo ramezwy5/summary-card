@@ -17,8 +17,7 @@ body{
     background-color: hsl(225, 100%, 94%);
 }
 .container{
-    width: 25%;
-    aspect-ratio: 2;
+    width: 30%;
     background-color: #fff;
     margin: 12% auto;
     border-radius: 25px;
